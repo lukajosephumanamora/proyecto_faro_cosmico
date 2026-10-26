@@ -1,0 +1,135 @@
+/* Estilos Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #090D16;
+    color: #F8FAFC;
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Orbitron', sans-serif;
+    color: #0EA5E9;
+}
+
+/* Barra de Navegación Fija */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(9, 13, 22, 0.95);
+    border-bottom: 1px solid #7C3AED;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+}
+
+.logo {
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    color: #0EA5E9;
+    font-size: 1.2rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #F8FAFC;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #0EA5E9;
+}
+
+/* Secciones */
+section {
+    padding: 100px 20px 60px 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-bottom: 1px solid #1e293b;
+}
+
+/* Tarjetas de Personajes */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.card {
+    background-color: #111827;
+    border: 1px solid #7C3AED;
+    border-radius: 10px;
+    padding: 20px;
+    width: 250px;
+}
+
+.card img {
+    width: 100%;
+    height: 380px;         /* Aumentamos la altura para que quepa el cuerpo entero */
+    object-fit: contain;   /* Muestra la imagen completa sin recortar nada */
+    background-color: rgba(0, 0, 0, 0.3); /* Un fondo oscuro elegante para rellenar los bordes */
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+/* Botones y Terminal */
+.btn, button {
+    display: inline-block;
+    background-color: #0EA5E9;
+    color: #090D16;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.btn:hover, button:hover {
+    background-color: #7C3AED;
+    color: #F8FAFC;
+}
+
+.alerta {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #38bdf8;
+}
+
+/* Diseño Adaptable (Responsive para Celulares) */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Puedes simplificar el menú móvil ocultándolo o apilándolo */
+    }
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
